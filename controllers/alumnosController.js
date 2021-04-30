@@ -162,16 +162,21 @@ const controller = {
         let archivoAlumnos = fs.readFileSync('alumnos.JSON' , {encoding: 'utf-8'});
         alumnos = JSON.parse(archivoAlumnos);
         console.log(alumnos);
-        let nuevoArray = alumnos.filter(function (value)
+        let nuevoArray = [];
+        for(let i = 0 ;i< alumnos.length; i++)
         {
-            console.log("El id del ususario que quiero eliminar = " + value.id);
-            return value.id;
+            if(alumnos[i].id-1 != idEliminar)
+            {
+                alumnos[i].id = i+1;
+                nuevoArray.push(alumnos[i]);
+            }
         }
-        );
-        console.log("Nuevo array")
-        console.log(nuevoArray);
 
-
+        console.log("El array queda asi:");
+        console.log(nuevoArray)
+        let alumnosJSON = JSON.stringify(nuevoArray);
+        fs.writeFileSync('alumnos.JSON',alumnosJSON);
+        res.redirect('/')
 
     }
 

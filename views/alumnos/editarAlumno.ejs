@@ -9,15 +9,19 @@
 <body>
     <h1>Bienvenidos a la paginda de edicion de alumno </h1>
     <form method = "POST" action="/alumnos/<%= alumnoToEdit.id-1 %>?_method=PUT">
+    <label for = "name">Nombre:</label>    
     <input type = "text" name="name" value="<%=alumnoToEdit.name %>">
     <br>
     <br>
+    <label for = "edad">Edad:</label>
     <input type = "text" name ="edad" value="<%=alumnoToEdit.edad %>">
     <br>
     <br>
+    <label for = "profesion">Profesion:</label>
     <input type = "text" name ="profesion" value="<%=alumnoToEdit.profesion %>">
     <br>
     <br>
+    <label for = "nacionalidad">Nacionalidad:</label>
     <input type = "text" name ="nacionalidad" value="<%=alumnoToEdit.nacionalidad%>">
     <br>
     <br>
