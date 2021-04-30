@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Los alumnos buscados fueron: </h1>
+    <% if(userResults.length ==0) { %> 
+        <h3>No hemos podido encontrar!</h3>
+        <% } else { %>
+    <% for (let i=0;i< userResults.length; i++) { %>     
+        <li>
+            <a href = "/alumnos/presentar?userID=<%=  userResults[i].id %>">  Nombre: <%= userResults[i].name %> </a>   
+        </li>
+
+        <BR>
+    <% } %>
+    <% } %>
+    <br>
+    <h2>Para volver a intentar buscar hace <a href = "/">Click aqui</a></h2>
+
+</body>
+</html>

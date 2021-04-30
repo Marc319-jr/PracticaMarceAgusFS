@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Index del proyecto</h1>
+    <h2>Este es el listado de alumnos</h2>
+    <% if(alumnos.length == 0 || alumnos == undefined ) { %> 
+        <h2>Aun no hay usuarios en la base</h2>
+    <% } %>
+    <ul>
+        <% for (let i=0;i< alumnos.length; i++) { %>
+           
+            <li>
+                <a href = "/alumnos/presentar?userID=<%= alumnos[i].id %>&userName=<%= alumnos[i].name %>">  Nombre: <%= alumnos[i].name %> </a>   
+            </li>
+
+            <BR>
+        <% } %>
+    </ul>
+    <h2>Buscar alumno</h2>
+    <form action = "/alumnos/search" method="GET">
+        <input type = "text" name = "search">
+        <input type="submit" value="Search" >
+    </form>
+    <br>
+    <button> <a href  = "/alumnos/crear">Crear</a> </button>  
+  
+</body>
+</html>
