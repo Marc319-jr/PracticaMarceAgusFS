@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
     <title>Index</title>
 </head>
 <body>
-    <h1>Index del proyecto</h1>
-    <h2>Este es el listado de alumnos</h2>
+    <%- include('./partials/header') %>
+    <main>
+    <h1>Iistado de alumnos</h1>
     <% if(alumnos.length == 0 || alumnos == undefined ) { %> 
+        <div class = "empty">
         <h2>Aun no hay usuarios en la base</h2>
+        </div>
     <% } %>
-    <ul>
+    
         <% for (let i=0;i< alumnos.length; i++) { %>
-           
-            <li>
-                <a href = "/alumnos/presentar?userID=<%= alumnos[i].id %>&userName=<%= alumnos[i].name %>">  Nombre: <%= alumnos[i].name %> </a>   
-            </li>
+                <a href = "/alumnos/presentar?userID=<%= alumnos[i].id %>&userName=<%= alumnos[i].name %>">
+                <div class = "alumno">
+                    <span>Nombre: <%= alumnos[i].name %> </span>
+                    <span>Edad: <%= alumnos[i].edad %> </span>
+                    <span>Profesion: <%= alumnos[i].profesion %> </span>
+                    <span>Nacionalidad:  <%= alumnos[i].nacionalidad %> </span>              
+                  </div>
+                </a>
 
-            <BR>
         <% } %>
-    </ul>
-    <h2>Buscar alumno</h2>
-    <form action = "/alumnos/search" method="GET">
-        <input type = "text" name = "search">
-        <input type="submit" value="Search" >
-    </form>
-    <br>
-    <button> <a href  = "/alumnos/crear">Crear</a> </button>  
-  
+
+</main>
+<%- include('./partials/footer') %>
+
 </body>
 </html>

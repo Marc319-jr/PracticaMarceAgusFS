@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{ margin: 0;
+      height: 100%;
+}
+
+header {
+    background-color:darkblue ;
+    height: 100px;
+    
+}
+
+header .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 20px;
+    padding: 20px;
+    background-color:darkblue ;
+
+}
+
+header .top a{
+    text-decoration: none;
+    color: black;
+}
+
+
+main{
+    margin: 0;
+    background-color: #1E1E1E;
+    height: 80vh;
+
+}
+
+main h1{
+    margin: 0;
+}
+
+main .alumno{
+    background-color: rgb(230,230,230);
+    width: 90%;
+    height: 130px;
+    margin:20px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+main  a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+main .alumno{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer{
+    background-color: darkblue;
+    height: 100px;
+
+}
+
