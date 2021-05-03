@@ -23,25 +23,35 @@ const controller = {
         }
         console.log("Creando un usuario con la siguiente info: ");
         console.log(req.body);
-        let nuevoAlumno = {
-            id: alumnos.length+1,
-            name: req.body.name,
-            edad: req.body.edad,
-            profesion: req.body.profesion,
-            nacionalidad: req.body.nacionalidad
-        };
-        
-        alumnos.push(nuevoAlumno);
-        console.log("guarde el alumno en el array ahora lo escribo en el archivo");
+        if(req.file)
+        {
+            let nuevoAlumno = {
+                id: alumnos.length+1,
+                name: req.body.name,
+                edad: req.body.edad,
+                profesion: req.body.profesion,
+                nacionalidad: req.body.nacionalidad,
+                foto: req.file.filename
+            };
+    
+            console.log(req.file)
+            alumnos.push(nuevoAlumno);
+            console.log("guarde el alumno en el array ahora lo escribo en el archivo");
+    
+            let alumnosJSON = JSON.stringify(alumnos);
+            fs.writeFileSync('alumnos.JSON',alumnosJSON);
+    
+    
+    
+            //faltaria aca guardar la info 
+    
+            res.redirect('/');
+        }
+        else{
+            console.log("Como no se selecciono imagen vuelvo a crear el formulario")
+            res.render('./alumnos/crearAlumno');
+        }
 
-        let alumnosJSON = JSON.stringify(alumnos);
-        fs.writeFileSync('alumnos.JSON',alumnosJSON);
-
-
-
-        //faltaria aca guardar la info 
-
-        res.redirect('/');
 
 
         //Esta ruta Guarda la infromacion del fomulario de creacion de alumno. como?

@@ -22,10 +22,15 @@
         <% for (let i=0;i< alumnos.length; i++) { %>
                 <a href = "/alumnos/presentar?userID=<%= alumnos[i].id %>&userName=<%= alumnos[i].name %>">
                 <div class = "alumno">
+                    <div class = "foto">
+                        <img src = "/image/profileImages/<%= alumnos[i].foto ? alumnos[i].foto : 'default.png' %>" alt = "" >
+                    </div>
+                    <div class = "info">
                     <span>Nombre: <%= alumnos[i].name %> </span>
                     <span>Edad: <%= alumnos[i].edad %> </span>
                     <span>Profesion: <%= alumnos[i].profesion %> </span>
-                    <span>Nacionalidad:  <%= alumnos[i].nacionalidad %> </span>              
+                    <span>Nacionalidad:  <%= alumnos[i].nacionalidad %> </span> 
+                </div>             
                   </div>
                 </a>
 

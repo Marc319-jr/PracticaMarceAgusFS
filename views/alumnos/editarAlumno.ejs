@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit</title>
-</head>
+    <%- include('../partials/head') %>
+    <link rel = "stylesheet" href="../css/style.css">
+
 <body>
     <main>
-    <h1>Bienvenidos a la paginda de edicion de alumno </h1>
-    <form method = "POST" action="/alumnos/<%= alumnoToEdit.id-1 %>?_method=PUT">
-    <label for = "name">Nombre:</label>    
-    <input type = "text" name="name" value="<%=alumnoToEdit.name %>">
-    <br>
-    <br>
-    <label for = "edad">Edad:</label>
-    <input type = "text" name ="edad" value="<%=alumnoToEdit.edad %>">
-    <br>
-    <br>
-    <label for = "profesion">Profesion:</label>
-    <input type = "text" name ="profesion" value="<%=alumnoToEdit.profesion %>">
-    <br>
-    <br>
-    <label for = "nacionalidad">Nacionalidad:</label>
-    <input type = "text" name ="nacionalidad" value="<%=alumnoToEdit.nacionalidad%>">
-    <br>
-    <br>
-  
-    <input type="submit" value="Editar">
+        <%- include('../partials/header') %>
 
-    <button> <a href  = "/">Al index</a> </button>  
-</form>
-</main>
-
-
-
+        <h1>Bienvenidos a la paginda de edicion de alumno </h1>
+        <div class = "presentacion">
+        <form method = "POST" action="/alumnos/<%= alumnoToEdit.id-1 %>?_method=PUT"  enctype="multipart/form-data">
+        <label for = "name">Nombre:</label>    
+        <input type = "text" name="name" value="<%=alumnoToEdit.name %>">
+        <br>
+        <br>
+        <label for = "edad">Edad:</label>
+        <input type = "text" name ="edad" value="<%=alumnoToEdit.edad %>">
+        <br>
+        <br>
+        <label for = "profesion">Profesion:</label>
+        <input type = "text" name ="profesion" value="<%=alumnoToEdit.profesion %>">
+        <br>
+        <br>
+        <label for = "nacionalidad">Nacionalidad:</label>
+        <input type = "text" name ="nacionalidad" value="<%=alumnoToEdit.nacionalidad%>">
+        <br>
+        <br>
+      
+        <input type="submit" value="Editar">
+    
+        <button> <a href  = "/">Al index</a> </button>  
+    </form>
+    </div>
+    </main>
 </body>
 </html>

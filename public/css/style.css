@@ -10,6 +10,8 @@ body{ margin: 0;
 header {
     background-color:darkblue ;
     height: 100px;
+    position: relative;
+    top: 0;
     
 }
 
@@ -22,6 +24,7 @@ header .top ul{
 header .top ul li{
     align-self: flex-start;
     margin-right: 10px;
+    font-size: 24px;
 }
 
 header .top{
@@ -36,20 +39,21 @@ header .top{
 
 header .top a{
     text-decoration: none;
-    color: black;
+    color: white;
+
 }
 
 
 main{
     margin: 0;
     background-color: #1E1E1E;
-    height: 900px
-
+    height: 100vh;
 }
 
 main h1{
     margin: 0 40px;
     padding: 20px 0;
+
 }
 
 main .alumno{
@@ -59,6 +63,9 @@ main .alumno{
     margin:20px auto;
     padding: 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 main  a{
@@ -67,16 +74,40 @@ main  a{
     
 }
 
-main .alumno{
+main .alumno .info{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-left: 30px;
+}
+
+main .alumno .foto{
+    align-self: center;
+    display: flex;
+}
+
+main .alumno .foto img{
+    border-radius: 50%;
+    width:130px;
+    height: 120px;
+ 
 }
 
 footer{
     background-color: darkblue;
     height: 100px;
+    position: relative;
+    bottom: 0;
 
+}
+
+
+body main .presentacion{
+    background-color: rgb(230,230,230);
+    margin: 0px auto;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px
 }
 
 

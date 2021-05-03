@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results</title>
-</head>
-<body>
+    <head>
+        <%- include('../partials/head') %>
+    </head>
+    <body>
+        <%- include('../partials/header') %>
     <main>
     <h1>Los alumnos buscados fueron: </h1>
+    <div class = "presentacion">
     <% if(userResults.length ==0) { %> 
         <h3>No hemos podido encontrar!</h3>
         <% } else { %>
@@ -22,6 +21,7 @@
     <% } %>
     <br>
     <h2>Para volver a intentar buscar hace <a href = "/">Click aqui</a></h2>
+</div>
 </main>
 </body>
 </html>
