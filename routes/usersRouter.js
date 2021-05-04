@@ -23,7 +23,7 @@ let fileUpload = multer({storage});
 const validateCrearteForm = [
     body('username').notEmpty().withMessage('Debes completar el campo de Nombre!'),
     body('lastname').notEmpty().withMessage('Debes completar el campo de Apellido!'),
-    body('email').isEmail().withMessage('Debes completar un Email! valido'),
+    body('email').isEmail().withMessage('Debes completar un Email valido!'),
     body('password').notEmpty().withMessage('Debes completar el campo de Password!'),
 ];
 

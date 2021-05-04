@@ -1,19 +1,36 @@
 <header>
     <div class = "top">
-        <ul type  = "none">
-            <li><a href  = "/alumnos/crear">Crear</a> </li>
-            <li><a href = "/users/login" >Ingresar</a> </li>
-            <li><a href = "/users/register" >Registrar</a> </li>
-            <li><a href = "/">Al INDEX</a></li>
-        </ul>
-         
-         <form action = "/alumnos/search" method="GET">
-            <input type = "text" name = "search">
-            <input type="submit" value="Search" >
-        </form>
+
+    <div class = "logo"><a href = "/">JS MA</a></div>
+
+<div class = "search">
+    <form action = "/alumnos/search" method="GET">
+        <input class = "search-box" type = "text" name = "search" placeholder="Type here to search">
+        <a class = "search-btn" href = "#">
+        <i class="fas fa-search"></i>
+        </a>
+    </form>
+</div>
+       
+
+        <div class = "user">
+            <i class="fas fa-user"></i>
+            <a href = "/users/login" >Ingresar</a> 
+            <a href = "/users/register" >Registrar</a> 
+
+        </div>  
     </div>
 
     <div class = "low">
+        <ul type = "none">
+            <li><a href="/alumnos/crear">Crear</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Info</a></li>
 
+
+        </ul>
     </div>
+
+        
 </header>

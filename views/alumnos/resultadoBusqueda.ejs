@@ -12,9 +12,9 @@
         <h3>No hemos podido encontrar!</h3>
         <% } else { %>
     <% for (let i=0;i< userResults.length; i++) { %>     
-        <li>
+        
             <a href = "/alumnos/presentar?userID=<%=  userResults[i].id %>">  Nombre: <%= userResults[i].name %> </a>   
-        </li>
+        
 
         <BR>
     <% } %>

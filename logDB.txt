@@ -1,1 +1,1 @@
-Se creo un registro al ingresar en: /crear
+Se creo un registro al ingresar en: /crearSe creo un registro al ingresar en: /delete/2?_method=DELETESe creo un registro al ingresar en: /delete/1?_method=DELETESe creo un registro al ingresar en: /crearSe creo un registro al ingresar en: /delete/1?_method=DELETE

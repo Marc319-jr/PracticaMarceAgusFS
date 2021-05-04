@@ -3,38 +3,38 @@
 }
 
 
+
 body{ margin: 0;
       height: 100%;
 }
 
 header {
-    background-color:darkblue ;
-    height: 100px;
+    background-color:#323233 ;
+    height:140px;
     position: relative;
     top: 0;
     
 }
 
-header .top ul{
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-}
-
-header .top ul li{
-    align-self: flex-start;
-    margin-right: 10px;
-    font-size: 24px;
-}
 
 header .top{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 25px 10px;
-    background-color:darkblue;
+    padding: 20px 20px;
     align-items: center;
 
+}
+
+
+header .top .logo{
+    font-size: 36px;
+    align-self: center;
+
+}
+
+header .top form{
+    align-self:center;
 }
 
 header .top a{
@@ -44,6 +44,77 @@ header .top a{
 }
 
 
+
+header .top .search {
+    background-color: #1E1E1E;
+    height: 40px;
+    box-sizing: 40px;
+    padding:10px;
+    border-radius: 40px;
+
+}
+
+header .top .search .search-box{
+    border: none;
+    background-color: #1E1E1E ;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    width: 360px;
+
+}
+
+
+
+header .top .search .search-btn{
+    color: black;
+    float: right;
+    width: 40px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #1E1E1E ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+header .top .user{
+    display: flex;
+    align-items: center;
+}
+
+header .top .user a{
+    margin:  0 9px;
+}
+
+header .top .user i{
+    background-color: rgb(26, 121, 153);
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+
+
+header .low ul{
+    margin-left: -25px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+}
+
+header .low li a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
 main{
     margin: 0;
     background-color: #1E1E1E;
@@ -53,6 +124,7 @@ main{
 main h1{
     margin: 0 40px;
     padding: 20px 0;
+    color: white;
 
 }
 
@@ -79,6 +151,8 @@ main .alumno .info{
     flex-direction: column;
     justify-content: space-around;
     margin-left: 30px;
+    padding: 0px 10px ;
+    border-left: 1px solid black;
 }
 
 main .alumno .foto{
@@ -94,7 +168,7 @@ main .alumno .foto img{
 }
 
 footer{
-    background-color: darkblue;
+    background-color: #323233;
     height: 100px;
     position: relative;
     bottom: 0;
@@ -107,7 +181,27 @@ body main .presentacion{
     margin: 0px auto;
     width: 90%;
     padding: 10px;
-    border-radius: 10px
+    border-radius: 10px; 
+
+}
+
+
+
+body main .presentacion .ingreso .errores{
+    font-size: 12px;
+    color: green;
+}
+
+body main .presentacion .foto{
+margin: 10px;
+text-align: center;
+}
+
+body main .presentacion img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    
 }
 
 

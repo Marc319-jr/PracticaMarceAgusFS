@@ -9,6 +9,9 @@
         <h1>Aca estamos presentando un alumno</h1>
 
         <div class = "presentacion">
+            <div class = "foto">
+    <img src = "/image/profileImages/<%= alumnoPresentar.foto ? alumnoPresentar.foto : 'default.png' %>" alt = "" >
+            </div>
     <h2>Nombre: <%= alumnoPresentar.name %> </h2>
     <h2>Edad: <%= alumnoPresentar.edad %> </h2>
     <h2>Profesion: <%= alumnoPresentar.profesion %> </h2>
